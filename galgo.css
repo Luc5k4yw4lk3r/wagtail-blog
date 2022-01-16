@@ -13,7 +13,10 @@
 	* VARIABLES *
 ==================== */
 :root {
-	--fuente: 'Open Sans', sans-serif;
+	--font: 'TWK Lausanne', sans-serif;
+	--font-size:normal;
+	--font-color-primary: black;
+	--font-color-grey: #767573;
 	--fondo: #f2f2f2;
 	--ancho-contenedor: 1200px;
 }
@@ -22,9 +25,12 @@
 	* ESTILOS GENERALES *
 ==================== */
 body {
-	background: var(--fondo);
-	font-family: var(--fuente);
+	background: black;
+	font-family: var(--font);
+	font-weight: normal;
+	font-style: normal;
 	font-size: 18px;
+	height: 100vh;
 }
 
 p {
@@ -34,6 +40,10 @@ p {
 img {
 	vertical-align: top;
 	width: 100%;
+}
+
+a{
+	color: black;
 }
 
 /* ====================
@@ -175,6 +185,114 @@ img {
 /* ====================
 	* COMPONENTES *
 ==================== */
+/* navbar */
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	transition: 0.6s;
+	padding: 40px 64px;
+	/* background-color: inherit; */
+	opacity: 1;
+	gap: 48px
+}
+
+header .logo{
+	background-image: url(./static/images/brand-logo-small.svg);
+	width: 170px;
+	height: 23px;
+}
+
+header .menu{
+	background-image: url(./static/images/menu-logo.svg);
+	width: 28.88px;
+	height: 22.95px;
+}
+
+/* footer mobile first */
+footer{
+	width: 100%;
+	background-color: #ECE9E6;
+	display: grid;
+	padding: 48px 24px;
+	gap: 48px;
+}
+
+footer p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+footer .signup-newletter p{
+	margin-bottom: 16px;
+	font-size: 17px;
+	line-height: 24px;
+}
+
+footer .signup-newletter input{
+	border: none;
+	background-color: inherit;
+	border-bottom: black solid 1px;
+	font-family: var(--font);
+	font-size: 41px;
+	line-height: 48px;
+	color: var(--font-color-grey);
+	width: 366px;
+}
+
+footer .address{
+	font-size: 17px;
+	line-height: 24px;
+}
+
+footer .policy{
+	color: var(--font-color-grey);
+	font-size: 14px;
+	line-height: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+@media (min-width:870px) {
+	footer{
+		height: 521px;
+		padding: 87px 64px 64px 64px ;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	footer .signup-newletter{
+		display: flex;
+	}
+
+	footer .signup-newletter p{
+		font-size: 22px;
+		margin-bottom: 32px;
+		line-height: 28px;
+	}
+
+	footer .signup-newletter input{
+		width: auto;
+	}
+
+	footer .address{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		/* justify-content: center; */
+		/* align-items: center;
+		align-content: flex-end; */
+	}
+
+	footer .policy{
+		flex-direction: row;
+		gap: 15px;
+		align-items: flex-end;
+	}
+}
+/* card highlight*/
 .card {
 	padding: 40px;
 	background: #fff;
@@ -400,7 +518,7 @@ h1, h2, h3, h4, h5, h6 {
 	* FORMULARIOS *
 ==================== */
 form * {
-	font-family: var(--fuente);
+	font-family: var(--font);
 }
 
 form .input {
@@ -457,3 +575,40 @@ form .input:focus {
 .texto-centrado {text-align: center;}
 .texto-izquierda {text-align: left;}
 .texto-derecha {text-align: right;}
+
+
+/* ====================
+	* DEBUGGING *
+==================== */
+.uno{
+	background-color: khaki;
+}
+
+.dos{
+	background-color: lawngreen;
+}
+
+.tres{
+	background-color: lightblue;
+}
+
+.cuatro{
+	background-color: lightcoral;
+
+}
+
+.cinco{
+	background-color: lightsalmon;
+}
+
+.seis{
+	background-color: lightslategray;
+}
+
+.siete{
+	background-color: mediumorchid;
+}
+
+.ocho{
+	background-color: mediumpurple;
+}
