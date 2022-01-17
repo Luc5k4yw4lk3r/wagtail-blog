@@ -22,6 +22,28 @@
                 containerMenu.setAttribute('data-visualization', 'false');
             });
 
+
+
+            const openModalButton = document.querySelectorAll('[data-modal-target]');
+            const closeModalButton =  document.querySelectorAll('[data-modal-close]');
+            const overlayModal = document.querySelector('.overlay-modal');
+            const logoHeader = document.querySelector('.logo');
+
+            closeModalButton.forEach( button => {
+                button.addEventListener("click", () => {
+                    let modal = button.closest('.modal-cookie')
+                    closeModal(modal);
+                })
+            });
+
+            function closeModal(modal){
+                if (modal ==  null) return
+                modal.classList.remove('active');
+                overlayModal.classList.remove('active');
+                logoHeader.classList.remove('first-time');
+            }
+
+
         });
 
 
@@ -30,7 +52,7 @@
 </head>
 <body>
     <header>
-        <div class="logo"></div>
+        <div class="logo first-time"></div>
         <div class="logo-menu"></div>
         <div class="container-menu" data-visualization="false">
             <div class="menu">
@@ -78,5 +100,17 @@
         <div class="siete">siete</div>
         <div class="ocho">ocho</div> -->
     </footer>
+    <div class="modal-cookie active">
+        <p>By using our site you agree to our use of cookies policy in order to deliver a better site experience.</p>
+        <div class="modal-cookie-buttons">
+            <a href="#" class="dismiss">Dismiss</a>
+            <div>
+                <input type="radio" name="" id="input-cookie">
+                <img src="./static/images/circle-cookie.svg"  data-modal-close="modal-cookie" alt="">
+                <label for="input-cookie">I agree</label>
+            </div>
+        </div>
+    </div>
+    <div class="overlay-modal active "></div>
 </body>
 </html>
