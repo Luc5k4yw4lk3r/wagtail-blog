@@ -321,7 +321,7 @@ footer .signup-newletter input{
 	font-size: 41px;
 	line-height: 48px;
 	color: var(--font-color-grey);
-	width: 366px;
+	max-width: 366px;
 }
 
 footer .address{
@@ -636,9 +636,10 @@ footer .policy{
 }
 
 .card-blog img{
-	/* width: 389px;
-	height: 296px; */
+	/* width: 389px; */
+	height: 296px;
 	border-radius: 32px;
+	object-fit: cover;
 }
 
 .container-blog-title{
@@ -682,6 +683,14 @@ footer .policy{
 	}
 }
 
+@media (max-width:425px) {
+
+
+	.container-blog-items{
+		justify-content: center;
+	}
+}
+
 
 .nav .contenedor {
 	display: flex;
@@ -719,6 +728,7 @@ main .cointainer-title{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	margin-top: 65px;
+	gap: 10px;
 }
 main .container-body{
 	display: grid;
@@ -756,6 +766,20 @@ body.dark main hr{
 	background-color: white;
 }
 
+.main-info img{
+	max-width: 637px;
+	max-height: 485px;
+	object-fit: cover;
+	border-radius: 32px;
+}
+
+.container-body img{
+	max-width: 637px;
+	max-height: 485px;
+	object-fit: cover;
+	border-radius: 32px;
+}
+
 /* Share */
 .share-component{
 	grid-column: 1/2;
@@ -776,6 +800,35 @@ body.dark main hr{
 .share-component i:hover{
 	color: white;
 	cursor: pointer;
+}
+
+
+@media (max-width:768px) {
+
+	main.post{
+		padding: 64px 24px 64px 24px;
+	}
+
+	main .cointainer-title{
+		grid-template-columns: 1fr;
+	}
+
+	main .container-body{
+		grid-template-columns: 1fr;
+	}
+
+	main .container-body .paragraph{
+		grid-column: unset;
+	}
+
+	.share-component{
+		grid-column: unset;
+		flex-direction: row;
+		position: unset;
+		align-items: center;
+    	justify-content: center;
+	}
+
 }
 
 /* ====================
