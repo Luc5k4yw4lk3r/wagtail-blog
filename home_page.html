@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+
+            // Menu
             let logoMenu = document.querySelector('.logo-menu');
             let btnMenuClose = document.querySelector('.btn-menu-close');
 
@@ -22,8 +24,7 @@
                 containerMenu.setAttribute('data-visualization', 'false');
             });
 
-
-
+            // Modal cookie
             const openModalButton = document.querySelectorAll('[data-modal-target]');
             const closeModalButton =  document.querySelectorAll('[data-modal-close]');
             const overlayModal = document.querySelector('.overlay-modal');

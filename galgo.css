@@ -17,7 +17,9 @@
 	--font-size:normal;
 	--font-color-primary: black;
 	--font-color-grey: #767573;
-	--font-color-orange: #ED732E;
+	--background-color-dark: black;
+	--background-color-orange: #ED732E;
+	--background-color-purple: #cfcfe3;
 	--fondo: #f2f2f2;
 	--ancho-contenedor: 1200px;
 }
@@ -26,12 +28,16 @@
 	* ESTILOS GENERALES *
 ==================== */
 body {
-	background: darkkhaki;
+	background: var(--background-color-purple);
 	font-family: var(--font);
 	font-weight: normal;
 	font-style: normal;
 	font-size: 18px;
 	height: 100vh;
+}
+
+body.dark{
+	background: var(--background-color-dark);
 }
 
 p {
@@ -79,6 +85,7 @@ a{
 	height: 100%;
     background-color: inherit;
 	display: flex;
+	flex-direction: column;
 }
 
 .container-team-members{
@@ -94,11 +101,13 @@ a{
 .container-blog-items{
 	width: 100%;
 	height: 100%;
-	padding: 20px 64px 20px 32px;
-	background-color: darkslategrey;
+	/* padding: 20px 64px 20px 32px; */
+	background-color: inherit;
 	display: flex;
-	flex-wrap: wrap;
+	/* display: grid; */
+	/* grid-template-columns: repeat(3, 1fr); */
 	flex-direction: row;
+	gap: 32px;
 }
 
 /* ====================
@@ -202,23 +211,25 @@ header{
 }
 
 header .logo{
-	background-image: url(./static/images/brand-logo-small.svg);
+	background-image: url(./static/images/brand-logo-small-black.svg);
 	width: 170px;
 	height: 23px;
 	transition: all 700ms ease;
 }
 
-header .logo.first-time{
-	margin:auto;
-	/* transition: margin 700ms ease; */
-	/* transform: translateX(200%); */
-}
-
 header .logo-menu{
-	background-image: url(./static/images/menu-logo.svg);
+	background-image: url(./static/images/menu-logo-black.svg);
 	width: 28.88px;
 	height: 22.95px;
 	cursor: pointer;
+}
+
+body.dark header .logo{
+	background-image: url(./static/images/brand-logo-small-white.svg);
+}
+
+body.dark header .logo-menu{
+	background-image: url(./static/images/menu-logo-white.svg);
 }
 
 @media (min-width:870px) {
@@ -365,7 +376,7 @@ footer .policy{
 
 /* modal cookie */
 .modal-cookie{
-	background-color: var(--font-color-orange);
+	background-color: var(--background-color-orange);
 	border-radius: 32px;
 	width: 366px;
 	height: 160px;
@@ -594,13 +605,14 @@ footer .policy{
 
 /* Blog component */
 .card-blog{
-	width: 389px;
-	height: 440px;
+	max-width: 389px;
+	/* max-height: 440px; */
+	/* min-height: 203,93px; */
+	min-width: 268px;
 	display: flex;
 	flex-direction: column;
 	background-color: inherit;
-	margin-left: 32px;
-
+	/* margin-left: 32px; */
 }
 
 .card-blog hr{
@@ -624,10 +636,52 @@ footer .policy{
 }
 
 .card-blog img{
-	width: 389px;
-	height: 296px;
+	/* width: 389px;
+	height: 296px; */
 	border-radius: 32px;
 }
+
+.container-blog-title{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 64px;
+}
+
+.container-blog p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.container-blog-title i{
+	margin-right: 12px;
+	width: 20px;
+	height: 24px;
+}
+
+.container-blog-footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 64px;
+}
+
+@media (max-width:960px) {
+
+	.container-blog-footer p{
+		display: none;
+	}
+
+	.container-blog-items{
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+
+	.card-blog{
+		max-width: 300px;
+	}
+}
+
 
 .nav .contenedor {
 	display: flex;
@@ -651,16 +705,91 @@ footer .policy{
 	background: rgba(89,59,221);
 }
 
+/* Post */
+main.post{
+	padding: 64px 64px 184px 64px;
+}
+
+main .title p{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+main .cointainer-title{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin-top: 65px;
+}
+main .container-body{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin-top: 72px;
+	margin-bottom: 182px;
+}
+
+main .container-body .paragraph{
+	grid-column: 2/4;
+}
+
+main .breadcrums{
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	margin-bottom: 16px;
+}
+
+main .post-info{
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	margin-top: 32px;
+}
+
+body.dark main{
+	color: white;
+}
+body.dark main a{
+	color: white;
+}
+
+body.dark main hr{
+	background-color: white;
+}
+
+/* Share */
+.share-component{
+	grid-column: 1/2;
+	position: sticky;
+	top: 73px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	margin: auto 0px
+
+}
+
+.share-component i{
+	width: 20px;
+	height: 24px;
+}
+
+.share-component i:hover{
+	color: white;
+	cursor: pointer;
+}
+
 /* ====================
 	* FUENTES *
 ==================== */
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .display-1 {
-	font-weight: 700;
-	font-size: 64px;
+	font-weight: normal;
+	font-size: 82px;
+	line-height: 84px;
 }
 
 .display-2 {
