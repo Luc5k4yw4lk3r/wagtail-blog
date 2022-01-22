@@ -78,6 +78,7 @@ a{
     position: relative;
     right: 0%;
 	overflow: unset;
+	flex-direction: column;
 }
 
 .container-blog{
@@ -831,6 +832,44 @@ body.dark main hr{
 
 }
 
+/* Blog index */
+
+main.blog-index{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	padding: 64px 64px 184px 64px;
+
+}
+
+.carousel-highlight-inner{
+    width: 100%;
+	height: 100%;
+    background-color: inherit;
+    display: flex;
+    transition: 3s;
+    position: relative;
+    right: 0%;
+	overflow: unset;
+}
+
+.carousel-highlight-title{
+	display: flex;
+	align-items: center;
+}
+
+.carousel-highlight-title i{
+	margin-right: 12px;
+}
+
+@media (max-width:768px) {
+
+	main.blog-index{
+		padding: 64px 24px 64px 24px;
+	}
+
+}
 /* ====================
 	* FUENTES *
 ==================== */
