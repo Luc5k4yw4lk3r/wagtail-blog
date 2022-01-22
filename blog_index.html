@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="galgo.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            // Menu
+            let logoMenu = document.querySelector('.logo-menu');
+            let btnMenuClose = document.querySelector('.btn-menu-close');
+
+            logoMenu.addEventListener("click", (e) => {
+                let containerMenu = document.querySelector('.container-menu');
+                containerMenu.setAttribute('data-visualization', 'true');
+            });
+
+            btnMenuClose.addEventListener("click", (e) => {
+                let containerMenu = document.querySelector('.container-menu');
+                containerMenu.setAttribute('data-visualization', 'false');
+            });
+
+        });
+
+
+    </script>
+    <title>Document</title>
+</head>
+<body class="">
+    <header>
+        <div class="logo"></div>
+        <div class="logo-menu"></div>
+        <div class="container-menu" data-visualization="false">
+            <div class="menu">
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">Approach</a>
+                    <a href="#">Corporates</a>
+                    <a href="#">Business Factory</a>
+                    <a href="#">Team</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Keep in touch</a>
+                </nav>
+            </div>
+            <!-- <div class="btn-menu-close">x</div> -->
+            <img class="btn-menu-close" src="./static/images/btn-menu-close.svg" alt="">
+        </div>
+    </header>
+    <main class="blog-index">
+        <div class="cointainer-title">
+            <div class="title">
+                <div class="breadcrums">
+                    <p>< Home / </p>
+                    <p>Blog</p>
+                </div>
+                <h1 class="display-1">
+                    NOBA Blog
+                </h1>
+            </div>
+        </div>
+        <div class="container-carousel-highlight">
+            <div class="carousel-highlight-title">
+                <i class="fas fa-arrow-right"></i><p>Business prototyping kit</p>
+            </div>
+            <div class="carousel-highlight-inner">
+                <div class="card-highlight">
+                    <h1>Prototyping Technique</h1>
+                    <div class="card-footer">
+                        <hr>
+                        <p>The Mechanical Turk/Wizard of Oz</p>
+                    </div>
+                </div>
+                <div class="card-highlight">
+                    <h1>The Product Hacking Technique</h1>
+                    <div class="card-footer">
+                        <hr>
+                        <p>Smart vibrators, e-cigarettes and engines</p>
+                    </div>
+                </div>
+                <div class="card-highlight">
+                    <h1>The "MacGyver" technique</h1>
+                    <div class="card-footer">
+                        <hr>
+                        <p>How COVID19 is showing us how to launch businesses faster</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="">
+        <div class="signup-newletter">
+            <div class="signup-newsletter-form">
+                <p>Sign-up for our newsletter</p>
+                <form action="">
+                    <input type="email" name="email" placeholder="Email address" id="">
+                </form>
+            </div>
+        </div>
+        <div class="address">
+            <div></div>
+            <p>Carrer Zamora, 46<br>Barcelona, 08005<br><br>+34 930 253 936<br><a href="mailto">accelerate@nobaventures.com</a><br><a href="#">Linkedin</a></p>
+        </div>
+        <div class="policy">
+            <p>© 2021 by NOBA Ventures</p>
+            <p>Privacy Policy</p>
+            <p>Cookie Policy</p>
+        </div>
+    </footer>
+    <div class="modal-cookie">
+        <p>By using our site you agree to our use of cookies policy in order to deliver a better site experience.</p>
+        <div class="modal-cookie-buttons">
+            <a href="#" class="dismiss">Dismiss</a>
+            <div>
+                <input type="radio" name="" id="input-cookie">
+                <img src="./static/images/circle-cookie.svg"  data-modal-close="modal-cookie" alt="">
+                <label for="input-cookie">I agree</label>
+            </div>
+        </div>
+    </div>
+    <div class="overlay-modal"></div>
+
+</body>
+</html>

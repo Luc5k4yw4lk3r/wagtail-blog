@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="galgo.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            let elements = document.querySelectorAll('.card-highlight');
+            let lastElement = elements[2];
+            // console.log('elements');
+            // console.log(elements);
+            // console.log(lastElement);
+            /* Lo que hay que hacer es contar cuantos items hay, tomar su tamano y dividir por el espacion que queda
+            si se asigna  mas de un sola caja o mas*/
+            // let  container =  document.querySelector('.card-highlight');
+            let  container =  document.querySelector('.container-carousel-highlight');
+            console.log(container.clientHeight);
+            console.log(window.screen.width);
+            lastElement.addEventListener("mouseover", function(e){
+                console.log('hover last element');
+                // container.style.position = 'relative';
+                container.style.right = '30%' ;
+            });
+
+            lastElement.addEventListener("mouseout", function(e){
+                console.log('hover last element');
+                // container.style.position = 'relative';
+                container.style.right = '0%' ;
+            });
+        });
+
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-carousel-highlight">
+        <div class="card-highlight">
+            <h1>Prototyping Technique</h1>
+            <div class="card-footer">
+                <hr>
+                <p>The Mechanical Turk/Wizard of Oz</p>
+            </div>
+        </div>
+        <div class="card-highlight">
+            <h1>The Product Hacking Technique</h1>
+            <div class="card-footer">
+                <hr>
+                <p>Smart vibrators, e-cigarettes and engines</p>
+            </div>
+        </div>
+        <div class="card-highlight">
+            <h1>The "MacGyver" technique</h1>
+            <div class="card-footer">
+                <hr>
+                <p>How COVID19 is showing us how to launch businesses faster</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

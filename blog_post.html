@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="galgo.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            // Menu
+            let logoMenu = document.querySelector('.logo-menu');
+            let btnMenuClose = document.querySelector('.btn-menu-close');
+
+            logoMenu.addEventListener("click", (e) => {
+                let containerMenu = document.querySelector('.container-menu');
+                containerMenu.setAttribute('data-visualization', 'true');
+            });
+
+            btnMenuClose.addEventListener("click", (e) => {
+                let containerMenu = document.querySelector('.container-menu');
+                containerMenu.setAttribute('data-visualization', 'false');
+            });
+
+        });
+
+
+    </script>
+    <title>Document</title>
+</head>
+<body class="">
+    <header>
+        <div class="logo"></div>
+        <div class="logo-menu"></div>
+        <div class="container-menu" data-visualization="false">
+            <div class="menu">
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">Approach</a>
+                    <a href="#">Corporates</a>
+                    <a href="#">Business Factory</a>
+                    <a href="#">Team</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Keep in touch</a>
+                </nav>
+            </div>
+            <!-- <div class="btn-menu-close">x</div> -->
+            <img class="btn-menu-close" src="./static/images/btn-menu-close.svg" alt="">
+        </div>
+    </header>
+    <main class="post">
+        <div class="cointainer-title">
+            <div class="title">
+                <div class="breadcrums">
+                    <p>Home</p>
+                    <p>Blog</p>
+                    <p>Business prototyping kit</p>
+                </div>
+                <h1 class="display-1">
+                    The Product Hacking Technique
+                </h1>
+                <div class="post-info">
+                    <p>Sep 28</p>
+                    <p>2 min</p>
+                </div>
+            </div>
+            <div class="main-info">
+                <img src="./static/images/img-blog-winter-bull.jpg" alt="">
+            </div>
+        </div>
+        <div class="container-body">
+            <div class="share-component">
+                <p>Share</p>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="far fa-envelope"></i>
+            </div>
+            <div class="paragraph">
+                <p>The face on Dema Tio’s boss said it all. The Indonesian-born entrepreneur was leaving his position at an investment firm in Boston to pursue his dream to solve a burning issue. Living oceans apart from his wife had taught him one thing that the pandemic has taught us well: physical intimacy is something you just cannot do on Zoom. </p>
+                <p>With that thought in mind, Vibease was created. The concept was as simple as a smartphone-controlled vibrator, a wellness device for women; the first one of its kind.</p>
+                <img src="./static/images/img-blog-winter-bull.jpg" alt="">
+                <p>But creating a smartphone controlled vibrator from scratch is no easy task. It entails knowing how to build the vibrating device, the Bluetooth connection and the casing around it. Dema knew it would require plenty of resources and time. But Dema was more worried about something else: would anyone be prepared to pay for Vibease? </p>
+                <p>His intuition was simple: “hack an existing product and sell it”.</p>
+                <p>Hacking actual products is by no means restricted to consumer devices. In the “Startup Way” Eric Ries mentions recommending this technique to GE engineers who needed to design the next generation of jet engines. He convinced them to take an anterior design, manually modify it and sell it to the first customer. They managed to hit the market within a few months instead of years, without compromising the safety or quality of their technology.</p>
+                <p>In conclusion, product-hacking is a great example of how the lean approach is not restricted to digital only products. Whether it’s vibrators, electronic cigarettes or jet engines, entrepreneurs have found a way to cut corners to make sure they are building the right it. Vibease’s boss, Dema Tio, would agree that we are all the better for it.</p>
+            </div>
+        </div>
+        <div class="container-blog">
+            <div class="container-blog-title">
+                <i class="fas fa-arrow-right"></i><p>More blog articles</p>
+            </div>
+            <div class="container-blog-items ">
+                <div class="card-blog">
+                    <hr>
+                    <div class="card-blog-info">
+                        <p class="info">Sep 28 2min Article</p>
+                        <p class="description">The Impact of Covid-19 on Corporate Innovation</p>
+                    </div>
+                    <img src="./static/images/travel-fitzroy.jpg" alt="">
+                </div>
+                <div class="card-blog">
+                    <hr>
+                    <div class="card-blog-info">
+                        <p class="info">Sep 28 2min Article</p>
+                        <p class="description">The Impact of Covid-19 on Corporate Innovation</p>
+                    </div>
+                    <img src="./static/images/img-blog-forest.jpg" alt="">
+                </div>
+                <div class="card-blog">
+                    <hr>
+                    <div class="card-blog-info">
+                        <p class="info">Sep 28 2min Article</p>
+                        <p class="description">The Impact of Covid-19 on Corporate Innovation</p>
+                    </div>
+                    <img src="./static/images/img-blog-homeworking.jpg" alt="">
+                </div>
+            </div>
+            <div class="container-blog-footer">
+                <p></p>
+                <a href="#">View all blog articles</a>
+                <a href="#">[151]</a>
+            </div>
+        </div>
+    </main>
+    <footer class="">
+        <div class="signup-newletter">
+            <div class="signup-newsletter-form">
+                <p>Sign-up for our newsletter</p>
+                <form action="">
+                    <input type="email" name="email" placeholder="Email address" id="">
+                </form>
+            </div>
+        </div>
+        <div class="address">
+            <div></div>
+            <p>Carrer Zamora, 46<br>Barcelona, 08005<br><br>+34 930 253 936<br><a href="mailto">accelerate@nobaventures.com</a><br><a href="#">Linkedin</a></p>
+        </div>
+        <div class="policy">
+            <p>© 2021 by NOBA Ventures</p>
+            <p>Privacy Policy</p>
+            <p>Cookie Policy</p>
+        </div>
+        <!-- <div class="uno">uno</div>
+        <div class="dos">dos</div>
+        <div class="tres">tres</div>
+        <div class="cuatro">cuatro</div>
+        <div class="cinco">cinco</div>
+        <div class="seis">seis</div>
+        <div class="siete">siete</div>
+        <div class="ocho">ocho</div> -->
+    </footer>
+    <div class="modal-cookie">
+        <p>By using our site you agree to our use of cookies policy in order to deliver a better site experience.</p>
+        <div class="modal-cookie-buttons">
+            <a href="#" class="dismiss">Dismiss</a>
+            <div>
+                <input type="radio" name="" id="input-cookie">
+                <img src="./static/images/circle-cookie.svg"  data-modal-close="modal-cookie" alt="">
+                <label for="input-cookie">I agree</label>
+            </div>
+        </div>
+    </div>
+    <div class="overlay-modal"></div>
+
+</body>
+</html>
