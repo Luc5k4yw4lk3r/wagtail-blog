@@ -53,10 +53,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
     })
 
-
-
     // function getScrollPercentage(){
     //     return ((slider.parentElement.scrollLeft / (slider.parentElement.scrollWidth - slider.parentElement.clientWidth) ) * 100);
     // }
+
+    // Modal cookie
+    const openModalButton = document.querySelectorAll('[data-modal-target]');
+    const closeModalButton =  document.querySelectorAll('[data-modal-close]');
+    const overlayModal = document.querySelector('.overlay-modal');
+    const logoHeader = document.querySelector('.logo');
+
+    closeModalButton.forEach( button => {
+        button.addEventListener("click", () => {
+            let modal = button.closest('.modal-cookie')
+            closeModal(modal);
+        })
+    });
+
+    function closeModal(modal){
+        if (modal ==  null) return
+        modal.classList.remove('active');
+        overlayModal.classList.remove('active');
+        logoHeader.classList.remove('first-time');
+    }
+
 
 });

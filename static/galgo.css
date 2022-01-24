@@ -40,6 +40,17 @@ body.dark{
 	background: var(--background-color-dark);
 }
 
+body.dark main{
+	color: white;
+}
+body.dark main a{
+	color: white;
+}
+
+body.dark main hr{
+	background-color: white;
+}
+
 p {
 	line-height: 27px;
 }
@@ -482,6 +493,8 @@ footer .policy{
     justify-content: space-between;
     align-items: center;
     border: none;
+	color: black;
+	z-index: -1;
 }
 
 .card-highlight:first-child{
@@ -496,7 +509,7 @@ footer .policy{
 .card-highlight hr{
     margin-bottom: 16px;
     border: none;
-    background-color: black;
+    background-color: black !important;
     height: 2px;
 }
 
@@ -756,16 +769,7 @@ main .post-info{
 	margin-top: 32px;
 }
 
-body.dark main{
-	color: white;
-}
-body.dark main a{
-	color: white;
-}
 
-body.dark main hr{
-	background-color: white;
-}
 
 .main-info img{
 	max-width: 637px;
@@ -872,6 +876,105 @@ main.blog-index{
 .carousel-highlight-title i{
 	margin-right: 12px;
 }
+
+.container-blog-index{
+	width: 100%;
+	height: 100%;
+    background-color: inherit;
+	display: flex;
+	flex-direction: column;
+	/* padding-right: 64px; */
+}
+
+.container-blog-index-items{
+	display: grid;
+	grid-row-gap: 64px;
+	margin-right: 64px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.card-blog-index{
+	max-width: 416px;
+	max-height: 440px;
+	min-height: 348px;
+	min-width: 268px;
+	display: flex;
+	flex-direction: column;
+	background-color: inherit;
+	/* margin-left: 32px; */
+}
+
+.container-blog-index-footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 64px;
+	margin-right: 64px;
+}
+
+.arrows i{
+	font-size: 32px;
+	font-weight: normal;
+}
+
+
+.arrows .fa-arrow-left{
+	margin-right: 40px;
+}
+
+.card-blog-index hr{
+	border: none;
+    background-color: black;
+    height: 2px;
+	margin-bottom: 16px;
+	margin-top: 0px;
+	width: 100%;
+}
+
+.card-blog-index img{
+	width: 416px;
+	height: 296px;
+	border-radius: 32px;
+	object-fit: cover;
+}
+
+
+
+
+
+@media screen and (max-width: 1400px) {
+	.container-blog-index-items{
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		margin-right: unset;
+
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.container-blog-index-items{
+		grid-template-columns: repeat(1, 1fr);
+		margin-right: unset;
+		justify-items: center;
+	}
+
+	.card-blog-index{
+		width: 90%;
+		height: auto;
+		min-height: unset;
+		min-width: unset;
+		max-width: unset;
+		max-height: unset;
+		/* margin-right: 32px; */
+	}
+
+	.card-blog-index img{
+		width: auto;
+		/* height: unset; */
+	}
+}
+
+
 
 @media (max-width:768px) {
 
