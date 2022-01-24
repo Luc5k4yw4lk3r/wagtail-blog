@@ -4,30 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="galgo.css">
+    <link rel="stylesheet" href="./static/normalize.css">
+    <link rel="stylesheet" href="./static/galgo.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-
-            // Menu
-            let logoMenu = document.querySelector('.logo-menu');
-            let btnMenuClose = document.querySelector('.btn-menu-close');
-
-            logoMenu.addEventListener("click", (e) => {
-                let containerMenu = document.querySelector('.container-menu');
-                containerMenu.setAttribute('data-visualization', 'true');
-            });
-
-            btnMenuClose.addEventListener("click", (e) => {
-                let containerMenu = document.querySelector('.container-menu');
-                containerMenu.setAttribute('data-visualization', 'false');
-            });
-
-        });
-
-
-    </script>
+    <script rel="javascript" src="./static/scripts.js"></script>
     <title>Document</title>
 </head>
 <body class="">
@@ -62,30 +42,32 @@
                 </h1>
             </div>
         </div>
-        <div class="container-carousel-highlight">
+        <div class="container-carousel-highlight slider-wrap">
             <div class="carousel-highlight-title">
                 <i class="fas fa-arrow-right"></i><p>Business prototyping kit</p>
             </div>
-            <div class="carousel-highlight-inner">
-                <div class="card-highlight">
-                    <h1>Prototyping Technique</h1>
-                    <div class="card-footer">
-                        <hr>
-                        <p>The Mechanical Turk/Wizard of Oz</p>
+            <div class="carousel-highlight-inner slider">
+                <div class="slider-inner">
+                    <div class="card-highlight">
+                        <h1>Prototyping Technique</h1>
+                        <div class="card-footer">
+                            <hr>
+                            <p>The Mechanical Turk/Wizard of Oz</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card-highlight">
-                    <h1>The Product Hacking Technique</h1>
-                    <div class="card-footer">
-                        <hr>
-                        <p>Smart vibrators, e-cigarettes and engines</p>
+                    <div class="card-highlight">
+                        <h1>The Product Hacking Technique</h1>
+                        <div class="card-footer">
+                            <hr>
+                            <p>Smart vibrators, e-cigarettes and engines</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card-highlight">
-                    <h1>The "MacGyver" technique</h1>
-                    <div class="card-footer">
-                        <hr>
-                        <p>How COVID19 is showing us how to launch businesses faster</p>
+                    <div class="card-highlight">
+                        <h1>The "MacGyver" technique</h1>
+                        <div class="card-footer">
+                            <hr>
+                            <p>How COVID19 is showing us how to launch businesses faster</p>
+                        </div>
                     </div>
                 </div>
             </div>

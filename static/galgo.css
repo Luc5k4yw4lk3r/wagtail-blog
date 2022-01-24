@@ -70,14 +70,14 @@ a{
 }
 
 .container-carousel-highlight{
-    width: 100%;
-	height: 100%;
+    /* width: 100%; */
+	height: 600px;
     background-color: inherit;
     display: flex;
     transition: 3s;
     position: relative;
     right: 0%;
-	overflow: unset;
+	overflow: hidden;
 	flex-direction: column;
 }
 
@@ -212,25 +212,25 @@ header{
 }
 
 header .logo{
-	background-image: url(./static/images/brand-logo-small-black.svg);
+	background-image: url(./images/brand-logo-small-black.svg);
 	width: 170px;
 	height: 23px;
 	transition: all 700ms ease;
 }
 
 header .logo-menu{
-	background-image: url(./static/images/menu-logo-black.svg);
+	background-image: url(./images/menu-logo-black.svg);
 	width: 28.88px;
 	height: 22.95px;
 	cursor: pointer;
 }
 
 body.dark header .logo{
-	background-image: url(./static/images/brand-logo-small-white.svg);
+	background-image: url(./images/brand-logo-small-white.svg);
 }
 
 body.dark header .logo-menu{
-	background-image: url(./static/images/menu-logo-white.svg);
+	background-image: url(./images/menu-logo-white.svg);
 }
 
 @media (min-width:870px) {
@@ -277,7 +277,7 @@ body.dark header .logo-menu{
 
 .btn-menu-close{
 	position: absolute;
-	/* background-image: url(./static/images/btn-menu-close.svg); */
+	/* background-image: url(./images/btn-menu-close.svg); */
 	top: 40px;
 	right: 64px;
 	cursor: pointer;
@@ -416,7 +416,7 @@ footer .policy{
 }
 
 .modal-cookie-buttons label[for="input-cookie"]{
-	/* background: url(./static/images/circle-cookie.svg) no-repeat;
+	/* background: url(./images/circle-cookie.svg) no-repeat;
 	background-position: 0 -32px; */
 }
 
@@ -526,7 +526,7 @@ footer .policy{
 }
 
 /* Slider component*/
-.slider{
+/* .slider{
 	position: absolute;
 	left: 10%;
 	top: 30%;
@@ -545,7 +545,7 @@ footer .policy{
 	grid-template-columns: repeat(7, 1fr);
 	gap: 5px;
 	pointer-events: none;
-}
+} */
 
 .slide-card{
 	height: 100%;
@@ -844,15 +844,25 @@ main.blog-index{
 }
 
 .carousel-highlight-inner{
-    width: 100%;
+    /* width: 100%; */
 	height: 100%;
     background-color: inherit;
     display: flex;
     transition: 3s;
     position: relative;
-    right: 0%;
-	overflow: unset;
+    /* right: 0%; */
+	top: 0;
+	left: 0;
+	overflow: hidden;
 }
+
+
+.carousel-highlight-inner .slider-inner {
+	position: absolute;
+	display: flex;
+	top: 0;
+	left: 0;
+  }
 
 .carousel-highlight-title{
 	display: flex;
