@@ -1105,8 +1105,78 @@ main.blog-index{
 		/* height: 232px; */
 		margin-bottom: 100px;
 	}
+}
 
+/* Noba Corporate */
+.container-corporate{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 128px 64px;
+}
 
+.corporate-breadcrum{
+
+}
+
+.corporate-title{
+	font-size: 82px;
+	line-height: 84px;
+	width: 70%;
+}
+
+.corporate-inner{
+	height: 100%;
+	width: 100%;
+}
+
+.corporate-inner .slider-inner{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	row-gap: 32px;
+	column-gap: 48px;
+}
+
+.card-corporate{
+	width: 416px;
+	height: 100%;
+}
+
+.card-corporate hr{
+    margin-bottom: 40px;
+    border: none;
+    background-color: black !important;
+    height: 2px;
+}
+
+/* Noba Help Launched */
+.card-projects-help{
+	width: 416px;
+}
+
+.card-projects-help .project-title{
+	font-size: 51px;
+	line-height: 64px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.card-projects-help .project-description{
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.card-projects-help table{
+	width: 100%;
+}
+
+.card-projects-help hr{
+	border: none;
+    background-color: black;
+    height: 2px;
+	margin-bottom: 0px;
+	margin-top: 0px;
 }
 
 /* ====================
@@ -1195,6 +1265,7 @@ form .input:focus {
 .texto-izquierda {text-align: left;}
 .texto-derecha {text-align: right;}
 
+.width-colum-project-help{ width: 30%;}
 
 /* ====================
 	* DEBUGGING *
