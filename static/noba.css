@@ -71,6 +71,10 @@ a{
 	color: black;
 }
 
+section{
+	width: 100%;
+}
+
 /* ====================
 	* CONTENEDORES *
 ==================== */
@@ -1133,13 +1137,13 @@ main.blog-index{
 
 .corporate-inner .slider-inner{
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(auto-fill, minmax(416px, 1fr)); 
 	row-gap: 32px;
 	column-gap: 48px;
 }
 
 .card-corporate{
-	width: 416px;
+	/* width: 416px; */
 	height: 100%;
 }
 
@@ -1151,8 +1155,20 @@ main.blog-index{
 }
 
 /* Noba Help Launched */
+.container-projects-help{
+	padding: 182px 64px;
+	width: 100%;
+}
+
+.projects-help-title{
+	font-size: 51px;
+	line-height: 64px;
+	margin-bottom: 64px;
+	margin-top: 0px;
+}
+
 .card-projects-help{
-	width: 416px;
+	/* width: 416px; */
 }
 
 .card-projects-help .project-title{
@@ -1171,6 +1187,17 @@ main.blog-index{
 	width: 100%;
 }
 
+.projects-help-inner .slider-inner{
+	display: grid;
+	/* opcion cail no me gusta que  partir de 800  se ve un solo componente gigante */
+	/* grid-template-columns: repeat(auto-fill, minmax(416px, 1fr));*/
+	/* grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));   */
+	/* 416px */
+	/* 268px */
+	gap: 48px 32px;
+	/* grid-auto-rows: 288px; */
+}
+
 .card-projects-help hr{
 	border: none;
     background-color: black;
@@ -1178,6 +1205,74 @@ main.blog-index{
 	margin-bottom: 0px;
 	margin-top: 0px;
 }
+
+
+.card-projects-help table {
+	border-spacing: 0px 16px;
+}
+
+.card-projects-help tr td:first-child {
+	padding-right: 24px;
+	vertical-align: text-top;
+}
+
+.container-projects-help-footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 64px;
+}
+
+.card-projects-help.gold{
+	color: #ED732E;
+}
+
+.card-projects-help.gold hr{
+    background-color: #ED732E;
+}
+
+@media screen and (min-width: 800px) {
+	.projects-help-inner .slider-inner{
+		display: grid;
+		/* opcion cail no me gusta que  partir de 800  se ve un solo componente gigante */
+		grid-template-columns: repeat(auto-fill, minmax(416px, 1fr));
+		/* grid-template-columns: repeat(auto-fit, minmax(268, 1fr));   */
+		/* 416px */
+		/* 268px */
+		gap: 48px 32px;
+	}
+
+}
+
+/* Companies we work with */
+.container-companies-we-work-with{
+	padding: 0px 0px 182px 64px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.companies-we-work-with-title{
+	font-size: 51px;
+	line-height: 64px;
+	margin-bottom: 94px;
+}
+
+.companies-we-work-with-inner{
+	position: relative;
+}
+
+.companies-we-work-with-inner .slider-inner{
+	position: relative;
+	display: flex;
+	gap: 93px;
+}
+
+.company-logo{
+	width: 170px;
+	height: 33.3px;
+}
+
 
 /* ====================
 	* FUENTES *
